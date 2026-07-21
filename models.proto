@@ -78,14 +78,13 @@ message CitizenCoupon {
   int64 TotalNoTax = 11;
 }
 
-message QrCoupon {
-  uint64 BusinessId = 1;
-  uint64 CouponId = 2;
-  uint64 BranchId = 3;
-  uint64 PosId = 4;
-  CouponType Type = 5;
-  int64 Time = 6;
-  int64 Total = 7;
-  repeated TaxGroup TaxGroups = 8;
-  int64 TotalTax = 9;
-}
+
+
+
+
+
+
+
+
+
+

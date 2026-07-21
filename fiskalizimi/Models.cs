@@ -45,15 +45,11 @@ namespace Atk {
             "ASgJEh0KBFR5cGUYBiABKA4yDy5hdGsuQ291cG9uVHlwZRIMCgRUaW1lGAcg",
             "ASgDEg0KBVRvdGFsGAggASgDEiAKCVRheEdyb3VwcxgJIAMoCzINLmF0ay5U",
             "YXhHcm91cBIQCghUb3RhbFRheBgKIAEoAxISCgpUb3RhbE5vVGF4GAsgASgD",
-            "IsEBCghRckNvdXBvbhISCgpCdXNpbmVzc0lkGAEgASgEEhAKCENvdXBvbklk",
-            "GAIgASgEEhAKCEJyYW5jaElkGAMgASgEEg0KBVBvc0lkGAQgASgEEh0KBFR5",
-            "cGUYBSABKA4yDy5hdGsuQ291cG9uVHlwZRIMCgRUaW1lGAYgASgDEg0KBVRv",
-            "dGFsGAcgASgDEiAKCVRheEdyb3VwcxgIIAMoCzINLmF0ay5UYXhHcm91cBIQ",
-            "CghUb3RhbFRheBgJIAEoAyo/CgpDb3Vwb25UeXBlEg8KC1Vua25vd25UeXBl",
-            "EAASCAoEU2FsZRABEgoKBkNhbmNlbBACEgoKBlJldHVybhADKnMKC1BheW1l",
-            "bnRUeXBlEhIKDlVua25vd25QYXltZW50EAASCAoEQ2FzaBABEg4KCkNyZWRp",
-            "dENhcmQQAhILCgdWb3VjaGVyEAMSCgoGQ2hlcXVlEAQSEgoOQ3J5cHRvQ3Vy",
-            "cmVuY3kQBRIJCgVPdGhlchAGQglaBy4vcHJvdG9iBnByb3RvMw=="));
+            "Kj8KCkNvdXBvblR5cGUSDwoLVW5rbm93blR5cGUQABIICgRTYWxlEAESCgoG",
+            "Q2FuY2VsEAISCgoGUmV0dXJuEAMqcwoLUGF5bWVudFR5cGUSEgoOVW5rbm93",
+            "blBheW1lbnQQABIICgRDYXNoEAESDgoKQ3JlZGl0Q2FyZBACEgsKB1ZvdWNo",
+            "ZXIQAxIKCgZDaGVxdWUQBBISCg5DcnlwdG9DdXJyZW5jeRAFEgkKBU90aGVy",
+            "EAZCCVoHLi9wcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Atk.CouponType), typeof(global::Atk.PaymentType), }, null, new pbr::GeneratedClrTypeInfo[] {
@@ -61,8 +57,7 @@ namespace Atk {
             new pbr::GeneratedClrTypeInfo(typeof(global::Atk.Payment), global::Atk.Payment.Parser, new[]{ "Type", "Amount" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Atk.TaxGroup), global::Atk.TaxGroup.Parser, new[]{ "TaxRate", "TotalForTax", "TotalTax" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Atk.PosCoupon), global::Atk.PosCoupon.Parser, new[]{ "BusinessId", "CouponId", "BranchId", "Location", "OperatorId", "PosId", "ApplicationId", "VerificationNo", "Type", "Time", "Items", "Payments", "Total", "TaxGroups", "TotalTax", "TotalNoTax", "ReferenceNo", "TransactionNo", "TotalDiscount" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Atk.CitizenCoupon), global::Atk.CitizenCoupon.Parser, new[]{ "BusinessId", "CouponId", "BranchId", "PosId", "VerificationNo", "Type", "Time", "Total", "TaxGroups", "TotalTax", "TotalNoTax" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Atk.QrCoupon), global::Atk.QrCoupon.Parser, new[]{ "BusinessId", "CouponId", "BranchId", "PosId", "Type", "Time", "Total", "TaxGroups", "TotalTax" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Atk.CitizenCoupon), global::Atk.CitizenCoupon.Parser, new[]{ "BusinessId", "CouponId", "BranchId", "PosId", "VerificationNo", "Type", "Time", "Total", "TaxGroups", "TotalTax", "TotalNoTax" }, null, null, null, null)
           }));
     }
     #endregion
@@ -89,7 +84,6 @@ namespace Atk {
   #endregion
 
   #region Messages
-  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class CouponItem : pb::IMessage<CouponItem>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -419,11 +413,7 @@ namespace Atk {
     #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
-      if ((tag & 7) == 4) {
-        // Abort on any end group tag.
-        return;
-      }
-      switch(tag) {
+        switch(tag) {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
@@ -466,11 +456,7 @@ namespace Atk {
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
-      if ((tag & 7) == 4) {
-        // Abort on any end group tag.
-        return;
-      }
-      switch(tag) {
+        switch(tag) {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
@@ -509,7 +495,6 @@ namespace Atk {
 
   }
 
-  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Payment : pb::IMessage<Payment>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -694,11 +679,7 @@ namespace Atk {
     #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
-      if ((tag & 7) == 4) {
-        // Abort on any end group tag.
-        return;
-      }
-      switch(tag) {
+        switch(tag) {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
@@ -721,11 +702,7 @@ namespace Atk {
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
-      if ((tag & 7) == 4) {
-        // Abort on any end group tag.
-        return;
-      }
-      switch(tag) {
+        switch(tag) {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
@@ -744,7 +721,6 @@ namespace Atk {
 
   }
 
-  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class TaxGroup : pb::IMessage<TaxGroup>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -958,11 +934,7 @@ namespace Atk {
     #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
-      if ((tag & 7) == 4) {
-        // Abort on any end group tag.
-        return;
-      }
-      switch(tag) {
+        switch(tag) {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
@@ -989,11 +961,7 @@ namespace Atk {
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
-      if ((tag & 7) == 4) {
-        // Abort on any end group tag.
-        return;
-      }
-      switch(tag) {
+        switch(tag) {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
@@ -1016,7 +984,6 @@ namespace Atk {
 
   }
 
-  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class PosCoupon : pb::IMessage<PosCoupon>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1661,11 +1628,7 @@ namespace Atk {
     #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
-      if ((tag & 7) == 4) {
-        // Abort on any end group tag.
-        return;
-      }
-      switch(tag) {
+        switch(tag) {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
@@ -1756,11 +1719,7 @@ namespace Atk {
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
-      if ((tag & 7) == 4) {
-        // Abort on any end group tag.
-        return;
-      }
-      switch(tag) {
+        switch(tag) {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
@@ -1847,7 +1806,6 @@ namespace Atk {
 
   }
 
-  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class CitizenCoupon : pb::IMessage<CitizenCoupon>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2282,11 +2240,7 @@ namespace Atk {
     #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
-      if ((tag & 7) == 4) {
-        // Abort on any end group tag.
-        return;
-      }
-      switch(tag) {
+        switch(tag) {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
@@ -2345,11 +2299,7 @@ namespace Atk {
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
-      if ((tag & 7) == 4) {
-        // Abort on any end group tag.
-        return;
-      }
-      switch(tag) {
+        switch(tag) {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
@@ -2395,489 +2345,6 @@ namespace Atk {
           }
           case 88: {
             TotalNoTax = input.ReadInt64();
-            break;
-          }
-        }
-      }
-    }
-    #endif
-
-  }
-
-  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
-  public sealed partial class QrCoupon : pb::IMessage<QrCoupon>
-  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      , pb::IBufferMessage
-  #endif
-  {
-    private static readonly pb::MessageParser<QrCoupon> _parser = new pb::MessageParser<QrCoupon>(() => new QrCoupon());
-    private pb::UnknownFieldSet _unknownFields;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public static pb::MessageParser<QrCoupon> Parser { get { return _parser; } }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public static pbr::MessageDescriptor Descriptor {
-      get { return global::Atk.ModelsReflection.Descriptor.MessageTypes[5]; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    pbr::MessageDescriptor pb::IMessage.Descriptor {
-      get { return Descriptor; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public QrCoupon() {
-      OnConstruction();
-    }
-
-    partial void OnConstruction();
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public QrCoupon(QrCoupon other) : this() {
-      businessId_ = other.businessId_;
-      couponId_ = other.couponId_;
-      branchId_ = other.branchId_;
-      posId_ = other.posId_;
-      type_ = other.type_;
-      time_ = other.time_;
-      total_ = other.total_;
-      taxGroups_ = other.taxGroups_.Clone();
-      totalTax_ = other.totalTax_;
-      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public QrCoupon Clone() {
-      return new QrCoupon(this);
-    }
-
-    /// <summary>Field number for the "BusinessId" field.</summary>
-    public const int BusinessIdFieldNumber = 1;
-    private ulong businessId_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public ulong BusinessId {
-      get { return businessId_; }
-      set {
-        businessId_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "CouponId" field.</summary>
-    public const int CouponIdFieldNumber = 2;
-    private ulong couponId_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public ulong CouponId {
-      get { return couponId_; }
-      set {
-        couponId_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "BranchId" field.</summary>
-    public const int BranchIdFieldNumber = 3;
-    private ulong branchId_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public ulong BranchId {
-      get { return branchId_; }
-      set {
-        branchId_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "PosId" field.</summary>
-    public const int PosIdFieldNumber = 4;
-    private ulong posId_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public ulong PosId {
-      get { return posId_; }
-      set {
-        posId_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "Type" field.</summary>
-    public const int TypeFieldNumber = 5;
-    private global::Atk.CouponType type_ = global::Atk.CouponType.UnknownType;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Atk.CouponType Type {
-      get { return type_; }
-      set {
-        type_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "Time" field.</summary>
-    public const int TimeFieldNumber = 6;
-    private long time_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public long Time {
-      get { return time_; }
-      set {
-        time_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "Total" field.</summary>
-    public const int TotalFieldNumber = 7;
-    private long total_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public long Total {
-      get { return total_; }
-      set {
-        total_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "TaxGroups" field.</summary>
-    public const int TaxGroupsFieldNumber = 8;
-    private static readonly pb::FieldCodec<global::Atk.TaxGroup> _repeated_taxGroups_codec
-        = pb::FieldCodec.ForMessage(66, global::Atk.TaxGroup.Parser);
-    private readonly pbc::RepeatedField<global::Atk.TaxGroup> taxGroups_ = new pbc::RepeatedField<global::Atk.TaxGroup>();
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::Atk.TaxGroup> TaxGroups {
-      get { return taxGroups_; }
-    }
-
-    /// <summary>Field number for the "TotalTax" field.</summary>
-    public const int TotalTaxFieldNumber = 9;
-    private long totalTax_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public long TotalTax {
-      get { return totalTax_; }
-      set {
-        totalTax_ = value;
-      }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public override bool Equals(object other) {
-      return Equals(other as QrCoupon);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool Equals(QrCoupon other) {
-      if (ReferenceEquals(other, null)) {
-        return false;
-      }
-      if (ReferenceEquals(other, this)) {
-        return true;
-      }
-      if (BusinessId != other.BusinessId) return false;
-      if (CouponId != other.CouponId) return false;
-      if (BranchId != other.BranchId) return false;
-      if (PosId != other.PosId) return false;
-      if (Type != other.Type) return false;
-      if (Time != other.Time) return false;
-      if (Total != other.Total) return false;
-      if(!taxGroups_.Equals(other.taxGroups_)) return false;
-      if (TotalTax != other.TotalTax) return false;
-      return Equals(_unknownFields, other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public override int GetHashCode() {
-      int hash = 1;
-      if (BusinessId != 0UL) hash ^= BusinessId.GetHashCode();
-      if (CouponId != 0UL) hash ^= CouponId.GetHashCode();
-      if (BranchId != 0UL) hash ^= BranchId.GetHashCode();
-      if (PosId != 0UL) hash ^= PosId.GetHashCode();
-      if (Type != global::Atk.CouponType.UnknownType) hash ^= Type.GetHashCode();
-      if (Time != 0L) hash ^= Time.GetHashCode();
-      if (Total != 0L) hash ^= Total.GetHashCode();
-      hash ^= taxGroups_.GetHashCode();
-      if (TotalTax != 0L) hash ^= TotalTax.GetHashCode();
-      if (_unknownFields != null) {
-        hash ^= _unknownFields.GetHashCode();
-      }
-      return hash;
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public override string ToString() {
-      return pb::JsonFormatter.ToDiagnosticString(this);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void WriteTo(pb::CodedOutputStream output) {
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      output.WriteRawMessage(this);
-    #else
-      if (BusinessId != 0UL) {
-        output.WriteRawTag(8);
-        output.WriteUInt64(BusinessId);
-      }
-      if (CouponId != 0UL) {
-        output.WriteRawTag(16);
-        output.WriteUInt64(CouponId);
-      }
-      if (BranchId != 0UL) {
-        output.WriteRawTag(24);
-        output.WriteUInt64(BranchId);
-      }
-      if (PosId != 0UL) {
-        output.WriteRawTag(32);
-        output.WriteUInt64(PosId);
-      }
-      if (Type != global::Atk.CouponType.UnknownType) {
-        output.WriteRawTag(40);
-        output.WriteEnum((int) Type);
-      }
-      if (Time != 0L) {
-        output.WriteRawTag(48);
-        output.WriteInt64(Time);
-      }
-      if (Total != 0L) {
-        output.WriteRawTag(56);
-        output.WriteInt64(Total);
-      }
-      taxGroups_.WriteTo(output, _repeated_taxGroups_codec);
-      if (TotalTax != 0L) {
-        output.WriteRawTag(72);
-        output.WriteInt64(TotalTax);
-      }
-      if (_unknownFields != null) {
-        _unknownFields.WriteTo(output);
-      }
-    #endif
-    }
-
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (BusinessId != 0UL) {
-        output.WriteRawTag(8);
-        output.WriteUInt64(BusinessId);
-      }
-      if (CouponId != 0UL) {
-        output.WriteRawTag(16);
-        output.WriteUInt64(CouponId);
-      }
-      if (BranchId != 0UL) {
-        output.WriteRawTag(24);
-        output.WriteUInt64(BranchId);
-      }
-      if (PosId != 0UL) {
-        output.WriteRawTag(32);
-        output.WriteUInt64(PosId);
-      }
-      if (Type != global::Atk.CouponType.UnknownType) {
-        output.WriteRawTag(40);
-        output.WriteEnum((int) Type);
-      }
-      if (Time != 0L) {
-        output.WriteRawTag(48);
-        output.WriteInt64(Time);
-      }
-      if (Total != 0L) {
-        output.WriteRawTag(56);
-        output.WriteInt64(Total);
-      }
-      taxGroups_.WriteTo(ref output, _repeated_taxGroups_codec);
-      if (TotalTax != 0L) {
-        output.WriteRawTag(72);
-        output.WriteInt64(TotalTax);
-      }
-      if (_unknownFields != null) {
-        _unknownFields.WriteTo(ref output);
-      }
-    }
-    #endif
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public int CalculateSize() {
-      int size = 0;
-      if (BusinessId != 0UL) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt64Size(BusinessId);
-      }
-      if (CouponId != 0UL) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt64Size(CouponId);
-      }
-      if (BranchId != 0UL) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt64Size(BranchId);
-      }
-      if (PosId != 0UL) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt64Size(PosId);
-      }
-      if (Type != global::Atk.CouponType.UnknownType) {
-        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Type);
-      }
-      if (Time != 0L) {
-        size += 1 + pb::CodedOutputStream.ComputeInt64Size(Time);
-      }
-      if (Total != 0L) {
-        size += 1 + pb::CodedOutputStream.ComputeInt64Size(Total);
-      }
-      size += taxGroups_.CalculateSize(_repeated_taxGroups_codec);
-      if (TotalTax != 0L) {
-        size += 1 + pb::CodedOutputStream.ComputeInt64Size(TotalTax);
-      }
-      if (_unknownFields != null) {
-        size += _unknownFields.CalculateSize();
-      }
-      return size;
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void MergeFrom(QrCoupon other) {
-      if (other == null) {
-        return;
-      }
-      if (other.BusinessId != 0UL) {
-        BusinessId = other.BusinessId;
-      }
-      if (other.CouponId != 0UL) {
-        CouponId = other.CouponId;
-      }
-      if (other.BranchId != 0UL) {
-        BranchId = other.BranchId;
-      }
-      if (other.PosId != 0UL) {
-        PosId = other.PosId;
-      }
-      if (other.Type != global::Atk.CouponType.UnknownType) {
-        Type = other.Type;
-      }
-      if (other.Time != 0L) {
-        Time = other.Time;
-      }
-      if (other.Total != 0L) {
-        Total = other.Total;
-      }
-      taxGroups_.Add(other.taxGroups_);
-      if (other.TotalTax != 0L) {
-        TotalTax = other.TotalTax;
-      }
-      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void MergeFrom(pb::CodedInputStream input) {
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      input.ReadRawMessage(this);
-    #else
-      uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-      if ((tag & 7) == 4) {
-        // Abort on any end group tag.
-        return;
-      }
-      switch(tag) {
-          default:
-            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
-            break;
-          case 8: {
-            BusinessId = input.ReadUInt64();
-            break;
-          }
-          case 16: {
-            CouponId = input.ReadUInt64();
-            break;
-          }
-          case 24: {
-            BranchId = input.ReadUInt64();
-            break;
-          }
-          case 32: {
-            PosId = input.ReadUInt64();
-            break;
-          }
-          case 40: {
-            Type = (global::Atk.CouponType) input.ReadEnum();
-            break;
-          }
-          case 48: {
-            Time = input.ReadInt64();
-            break;
-          }
-          case 56: {
-            Total = input.ReadInt64();
-            break;
-          }
-          case 66: {
-            taxGroups_.AddEntriesFrom(input, _repeated_taxGroups_codec);
-            break;
-          }
-          case 72: {
-            TotalTax = input.ReadInt64();
-            break;
-          }
-        }
-      }
-    #endif
-    }
-
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
-      uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-      if ((tag & 7) == 4) {
-        // Abort on any end group tag.
-        return;
-      }
-      switch(tag) {
-          default:
-            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
-            break;
-          case 8: {
-            BusinessId = input.ReadUInt64();
-            break;
-          }
-          case 16: {
-            CouponId = input.ReadUInt64();
-            break;
-          }
-          case 24: {
-            BranchId = input.ReadUInt64();
-            break;
-          }
-          case 32: {
-            PosId = input.ReadUInt64();
-            break;
-          }
-          case 40: {
-            Type = (global::Atk.CouponType) input.ReadEnum();
-            break;
-          }
-          case 48: {
-            Time = input.ReadInt64();
-            break;
-          }
-          case 56: {
-            Total = input.ReadInt64();
-            break;
-          }
-          case 66: {
-            taxGroups_.AddEntriesFrom(ref input, _repeated_taxGroups_codec);
-            break;
-          }
-          case 72: {
-            TotalTax = input.ReadInt64();
             break;
           }
         }
